@@ -1,0 +1,16 @@
+公司基本面数据：
+	stocks_fundamental.xlsx（已预处理过）
+	来自Wind数据（淘宝购买），包含3608支股票的2015-2018年每季度的三个指标（净资产收益率、净利润同比增长率、营业务收入增长率）数据
+	2015年之后上市的公司的数据之前为空值，已改为'0'值
+	列名解释：
+		SecuritiesCode：证券代码
+		SecuritiesShortName：证券简称
+		ListingDate：上市时间
+		ListingBoard：上市板
+		ROE(x)_(y)：净资产收益率x年第y季度
+		ROE_CV：净资产收益率变异系数（样本总体标准差/样本均值）
+		NPGR(x)_(y)：净利润同比增长率x年第y季度
+		OIGR(x)_(y)：营业收入增长率x年第y季度
+	
+金融技术分析数据（股票历史交易数据）：
+	来自于Yahoo金融，使用pandas_datareader中data.get_data_yahoo()获得数据
